@@ -1,0 +1,22 @@
+# Build
+build/
+.gradle/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Secrets
+.env
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
