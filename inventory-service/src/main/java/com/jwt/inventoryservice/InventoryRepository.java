@@ -1,4 +1,6 @@
 package com.jwt.inventoryservice;
 
-public class InventoryRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InventoryRepository extends JpaRepository<Product, Integer> {
 }

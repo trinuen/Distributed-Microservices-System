@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.jwt'
 version = '0.0.1-SNAPSHOT'
-description = 'notification-service'
+description = 'order-service'
 
 java {
     toolchain {
@@ -29,9 +29,17 @@ dependencies {
     implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
     implementation 'org.hibernate.orm:hibernate-community-dialects'
 
+
     // AWS SDK BOM (bill of materials — manages versions)
     implementation platform('software.amazon.awssdk:bom:2.25.0')
     implementation 'software.amazon.awssdk:sqs'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
