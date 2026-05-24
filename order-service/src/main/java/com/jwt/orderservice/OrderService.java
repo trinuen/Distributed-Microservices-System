@@ -39,7 +39,6 @@ public class OrderService {
         String message = objectMapper.writeValueAsString(event);
         publisher.publish(inventoryQueueUrl, message, order.getId().toString());
         publisher.publish(notificationQueueUrl, message, order.getId().toString());
-        System.out.println(saved);
         return saved;
     }
 }

@@ -19,6 +19,6 @@ public class Publisher {
                 .messageGroupId(messageGroupId)
                 .messageDeduplicationId(UUID.randomUUID().toString())
                 .build();
-        System.out.println(sqsClient.sendMessage(request));
+        sqsClient.sendMessage(request);
     }
 }
